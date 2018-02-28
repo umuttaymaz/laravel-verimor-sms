@@ -1,0 +1,38 @@
+{
+    "name": "umuttaymaz/laravel-verimor-sms",
+    "description": "Verimor SMSAPI for Laravel applications",
+    "homepage": "https://github.com/umuttaymaz/laravel-verimor-sms",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Umut Taymaz",
+            "email": "umut@kreator.com.tr",
+            "homepage": "https://www.kreator.com.tr",
+            "role": "Co-Founder"
+        }
+    ],
+    "require": {
+        "php": ">=5.6.4",
+        "illuminate/support": "^5.1|^5.2|^5.3"
+    },
+    "require-dev": {
+        "mockery/mockery": "^0.9.5",
+        "phpunit/phpunit": "4.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "UmutTaymaz\\VerimorSMSAPI\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "UmutTaymaz\\VerimorSMSAPI\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit"
+    },
+    "config": {
+        "sort-packages": true
+    }
+}
