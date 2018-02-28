@@ -49,6 +49,7 @@ Add your Verimor username, password and default sender name to your `.env`:
 ```
 VERIMOR_USERNAME=username
 VERIMOR_PASSWORD=apiPassword
+VERIMOR_HEADER=verifiedHeader
 ```
 ## Usage
 
@@ -62,6 +63,14 @@ or
 
 ```php
 return Verimor::send('Example Message', function ($sms){
+        $sms->to('phoneNumber');
+});
+```
+
+If you want to send SMS with another header instead of env variable:
+
+```php
+return Verimor::header('anotherHeader')->send('Example Message', function ($sms){
         $sms->to('phoneNumber');
 });
 ```

@@ -30,7 +30,7 @@ class Verimor
      */
     public function __construct()
     {
-        $this->header = 'Kreator';
+        $this->header = env('VERIMOR_HEADER');
         $this->message = '';
     }
 
