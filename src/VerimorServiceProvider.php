@@ -23,7 +23,7 @@ class VerimorServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app->singleton('Verimor', function (){
+        $this->app->singleton('Verimor', function () {
             return new Verimor();
         });
     }

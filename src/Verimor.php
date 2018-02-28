@@ -3,15 +3,13 @@
  * Created by PhpStorm.
  * User: umuttaymaz
  * Date: 28.02.2018
- * Time: 23:42
+ * Time: 23:42.
  */
 
 namespace UmutTaymaz\VerimorSMSAPI;
 
-
 class Verimor
 {
-
     /**
      * @var string
      */
@@ -26,7 +24,6 @@ class Verimor
      * @var mixed
      */
     protected $recipients;
-
 
     /**
      * Verimor constructor.
@@ -81,26 +78,26 @@ class Verimor
     protected function sendToVerimor()
     {
         $messageData = [
-            "username" => env('VERIMOR_USERNAME'),
-            "password" => env('VERIMOR_PASSWORD'),
-            "source_addr" => $this->header,
-            "custom_id" => uniqid(),
-            "messages" => array(
-                array(
-                    "msg" => $this->message,
-                    "dest" => $this->recipients
-                )
-            )
+            'username' => env('VERIMOR_USERNAME'),
+            'password' => env('VERIMOR_PASSWORD'),
+            'source_addr' => $this->header,
+            'custom_id' => uniqid(),
+            'messages' => [
+                [
+                    'msg' => $this->message,
+                    'dest' => $this->recipients,
+                ],
+            ],
         ];
 
         $ch = curl_init('http://sms.verimor.com.tr/v2/send.json');
 
-        curl_setopt_array($ch, array(
-            CURLOPT_POST => TRUE,
-            CURLOPT_RETURNTRANSFER => TRUE,
-            CURLOPT_HTTPHEADER => array('Content-Type: application/json'),
+        curl_setopt_array($ch, [
+            CURLOPT_POST => true,
+            CURLOPT_RETURNTRANSFER => true,
+            CURLOPT_HTTPHEADER => ['Content-Type: application/json'],
             CURLOPT_POSTFIELDS => json_encode($messageData),
-        ));
+        ]);
 
         $http_response = curl_exec($ch);
         $http_code = curl_getinfo($ch, CURLINFO_HTTP_CODE);
@@ -111,6 +108,4 @@ class Verimor
 
         return $http_response;
     }
-
-
 }
