@@ -2,7 +2,7 @@
 
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
 [![Build Status](https://img.shields.io/travis/umuttaymaz/laravel-verimor-sms/master.svg?style=flat-square)](https://travis-ci.org/umuttaymaz/laravel-verimor-sms)
-[![StyleCI](https://styleci.io/repos/123153620/shield)](https://styleci.io/repos/123153620)
+[![StyleCI](https://styleci.io/repos/123347343/shield)](https://styleci.io/repos/123153620)
 [![Total Downloads](https://img.shields.io/packagist/dt/umuttaymaz/laravel-verimor-sms.svg?style=flat-square)](https://packagist.org/packages/umuttaymaz/laravel-verimor-sms)
 
 This package makes it easy to send notifications using [VerimorSMS](https://verimor.com.tr) with Laravel 5.3+.
