@@ -3,11 +3,10 @@
  * Created by PhpStorm.
  * User: umuttaymaz
  * Date: 1.03.2018
- * Time: 11:47
+ * Time: 11:47.
  */
 
 namespace UmutTaymaz\VerimorSMSAPI\tests;
-
 
 class ExampleTest extends \PHPUnit_Framework_TestCase
 {
